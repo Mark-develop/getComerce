@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 100%;
+    padding: 0;
+    max-width: 1200px; /* Optimal max width for readability */
+    margin: 0 auto; /* Centers the container */
+    padding: 0 15px; /* Padding on the sides for small screens */
+}
+
+.site-entry {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.vote-buttons {
+    flex: 0.1 0; /* Adjust width as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+.vote-buttons form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+.vote-up, .vote-down {
+    cursor: pointer;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 10px;
+}
+.vote-down {
+    background-color: #f44336; /* Red */
+}
+.site-info {
+    flex: 1;
+}
+.site-header h2 {
+    margin: 0;
+}
+.site-header h2 a {
+    color: dodgerblue;
+    text-decoration: underline;
+}
+.vote-count {
+    flex: 0 0 200px; /* Adjust width as needed */
+    text-align: right;
+    padding: 10px;
+    order: 2;
+}
+@media (max-width: 600px) {
+    body{
+        padding: 0;
+    }
+
+    .container{
+        width: 100vw;
+        padding: 0;
+
+    }
+
+    .site-entry {
+        flex-direction: column;
+    }
+    .vote-buttons{
+        order: 2;
+    }
+
+    .vote-buttons, .vote-count {
+        text-align: center;
+        flex: 0 0 auto;
+        width: 60%;
+    }
+
+    .vote-buttons > form > button{
+        border-radius: 5px;
+        width: inherit;
+    }
+
+    .vote-buttons > form{
+        width: inherit;
+        display: flex;
+        align-items: center;
+        width: 80%;
+    }
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 20px 0;
+    margin-top: 40px;
+    color: #667;
+    width: 100%;
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 20px;
+}
+
+.last-para {
+    margin-bottom: 40px;
+}
