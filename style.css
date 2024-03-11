@@ -140,6 +140,10 @@ footer {
     flex-wrap: wrap;
 }
 
+.site-header h1{
+    font-style: 32px;
+}
+
 .logo {
     height: 100%;
     margin-right: 20px;
