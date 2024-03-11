@@ -82,13 +82,16 @@ body {
     text-decoration: underline;
 }
 .vote-count {
-    flex: 0 0 200px; /* Adjust width as needed */
     text-align: right;
     padding: 10px;
     order: 2;
 }
 @media screen and (min-device-width : 120px) and (max-device-width : 680px) {
 
+    .site-header{
+    justify-content: space-evenly !important;
+        
+    }
 
     .container{
         width: 100%;
@@ -96,6 +99,7 @@ body {
 
     .site-header h1{
         font-style: 32px;
+        text-align: center;
     }
 
     .site-entry {
@@ -106,23 +110,29 @@ body {
     .vote-buttons{
         order: 2;
     }
+    .vote-count{
+
+    }
 
     .vote-buttons, .vote-count {
         text-align: center;
-        flex: 0 0 auto;
-        width: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: inherit;
+
     }
 
     .vote-buttons > form > button{
         border-radius: 5px;
-        width: inherit;
+        width: 100%;
     }
 
     .vote-buttons > form{
-        width: inherit;
-        display: flex;
-        align-items: center;
         width: 80%;
+        display: flex;
+        flex-direction: row;
+
     }
 }
 
@@ -135,7 +145,7 @@ footer {
     width: 100%;
 }
 
-.site-header {
+header.site-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -149,7 +159,6 @@ footer {
 
 .logo {
     height: 100%;
-    margin-right: 20px;
 }
 
 .last-para {
